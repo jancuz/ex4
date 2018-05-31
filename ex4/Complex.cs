@@ -37,6 +37,17 @@ namespace ex4
         {
             return new Complex(a.RealNumber - num, a.ImaginaryNumber);
         }
+
+        // перегрузка оператора *
+        public static Complex operator *(Complex a, Complex b)
+        {
+            return new Complex(a.RealNumber * b.RealNumber + a.ImaginaryNumber * b.ImaginaryNumber * (-1),
+                a.RealNumber * b.ImaginaryNumber + a.ImaginaryNumber * b.RealNumber);
+        }
+        public static Complex operator *(double num, Complex a)
+        {
+            return new Complex(a.RealNumber * num, a.ImaginaryNumber * num);
+        }
     }
 }
 
