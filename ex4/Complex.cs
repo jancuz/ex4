@@ -48,6 +48,15 @@ namespace ex4
         {
             return new Complex(a.RealNumber * num, a.ImaginaryNumber * num);
         }
+
+        // перегрузка оператора /
+        public static Complex operator /(Complex a, Complex b)
+        {
+            Complex bNegative = new Complex(b.RealNumber, b.ImaginaryNumber * (-1));
+            Complex numerator = new Complex((a * bNegative).RealNumber, (a * bNegative).ImaginaryNumber);
+            double denominator = Math.Pow(b.RealNumber, 2) - Math.Pow(b.ImaginaryNumber, 2) * (-1);
+            return new Complex(numerator.RealNumber / denominator, numerator.ImaginaryNumber / denominator);
+        }
     }
 }
 
