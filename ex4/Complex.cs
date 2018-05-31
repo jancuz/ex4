@@ -57,6 +57,17 @@ namespace ex4
             double denominator = Math.Pow(b.RealNumber, 2) - Math.Pow(b.ImaginaryNumber, 2) * (-1);
             return new Complex(numerator.RealNumber / denominator, numerator.ImaginaryNumber / denominator);
         }
+
+        public static void Show(Complex res)
+        {
+            if (res.ImaginaryNumber == 0)
+                Console.WriteLine("Выражение: 2 * u - 3 * u * v / (2 + w - v) - 7 = {0}", res.RealNumber);
+            else
+                if (res.ImaginaryNumber < 0)
+                Console.WriteLine("Выражение: 2 * u - 3 * u * v / (2 + w - v) - 7 = {0} - {1}i", res.RealNumber, Math.Abs(res.ImaginaryNumber));
+            else
+                Console.WriteLine("Выражение: 2 * u - 3 * u * v / (2 + w - v) - 7 = {0} + {1}i", res.RealNumber, res.ImaginaryNumber);
+        }
     }
 }
 
