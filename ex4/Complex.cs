@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ex4
 {
@@ -60,12 +56,12 @@ namespace ex4
         public static void Show(Complex res)
         {
             if (res.ImaginaryNumber == 0)
-                Console.WriteLine("Выражение: 2 * u - 3 * u * v / (2 + w - v) - 7 = {0}", res.RealNumber);
+                Console.WriteLine("Выражение: 2 * u + 3 * u * v / (2 + w - v) - 7 = {0}", res.RealNumber);
             else
                 if (res.ImaginaryNumber < 0)
-                Console.WriteLine("Выражение: 2 * u - 3 * u * v / (2 + w - v) - 7 = {0} - {1}i", res.RealNumber, Math.Abs(res.ImaginaryNumber));
+                Console.WriteLine("Выражение: 2 * u + 3 * u * v / (2 + w - v) - 7 = {0} - {1}i", res.RealNumber, Math.Abs(res.ImaginaryNumber));
             else
-                Console.WriteLine("Выражение: 2 * u - 3 * u * v / (2 + w - v) - 7 = {0} + {1}i", res.RealNumber, res.ImaginaryNumber);
+                Console.WriteLine("Выражение: 2 * u + 3 * u * v / (2 + w - v) - 7 = {0} + {1}i", res.RealNumber, res.ImaginaryNumber);
         }
     }
 }

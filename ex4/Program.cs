@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MyLibrary;
 
 namespace ex4
@@ -37,11 +33,12 @@ namespace ex4
             else
             {
                 Complex res6 = res3 / res5;
-                Complex res7 = res1 - res6;
+                Complex res7 = res1 + res6;
                 Complex res = res7 - 7;
                 Complex.Show(res);
             }
 
+            Console.WriteLine("Нажмие Enter для завершения работы программы ...");
             Console.ReadLine();
         }
     }
